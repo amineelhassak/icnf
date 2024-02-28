@@ -397,3 +397,18 @@
     transform: translate(20px,-13px);
 }
 
+.c{
+    position:absolute;
+    bottom: 100px;
+    display: flex;
+}
+.cart-1{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width:285px;
+    height: 245px;
+    box-shadow: 0 4 11.8 #0000002f;
+    background-color: white;
+    margin: 20px;
+}
