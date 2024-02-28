@@ -1,2 +1,2 @@
 # icnf
-icnf
+INF landing page 
