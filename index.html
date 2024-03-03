@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-  <title>Document</title>
+  <script src="script.js"></script>
+  <title>INCF - 2 0 2 4</title>
 </head>
 
 <body>
@@ -21,10 +22,33 @@
       </div>
       <div class="nav-links">
         <a href="#">HOME</a>
-        <a href="#">ABOUT THE CONFERENCE</a>
-        <a href="#">CONTACT</a>
+        <a href="#about">ABOUT THE CONFERENCE</a>
+        <a href="#contact">CONTACT</a>
       </div>
-      <a href="#" class="btn"> REGISTER </a>
+      <div>
+        <a href="#" id="registerButton" class="btn"><span>REGISTER</span></a>
+      </div>
+    </div>
+  </div>
+  <!-- The popup -->
+  <div id="popup" class="popup">
+    <div class="first-form-container">
+        <h1>SECURE YOUR SPOT : </h1>
+        <form action="submit" name="register">
+            <input type="text" placeholder="Full name" name="name" autocomplete="off" required>
+            <input type="email" placeholder="Email" name="email" autocomplete="off"><br>
+            <input type="tel" placeholder="Phone number" name="number" autocomplete="off">
+            <select name="academic_specialization" autocomplete="off">
+                <option value="standard" disabled selected>Academic Specialization</option>
+                <option value="bacdeux">Bac +2</option>
+                <option value="bactrois">Bac +3</option>
+                <option value="baccinq">Bac +5</option>
+                <option value="master">Master</option>
+                <option value="doctorat">Doctorat</option>
+            </select><br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
     </div>
   </div>
 
@@ -50,7 +74,7 @@
             <div class="card-title">Length</div>
             <img src="./assets/icons/icon2.svg" alt="icon" class="icon" />
             <p class="card-text">5 days</p>
-            <a href="#" class="btn-3">see the program</a>
+            <a href="#" class="btn-3">SEE THE PROGRAM</a>
           </div>
           <div class="card">
             <div class="card-title">Location</div>
@@ -58,7 +82,7 @@
             <p class="card-text">
               Faculty of Science and Education Mohammed V University of Rabat
             </p>
-            <a href="#" class="btn-2">see the map</a>
+            <a href="#" class="btn-2">SEE THE MAP</a>
           </div>
         </div>
       </div>
@@ -97,7 +121,7 @@
           <img src="./assets/img1.png" alt="" class="img1" />
           <div class="borde borde-r"></div>
         </div>
-        <div class="sec3-right">
+        <div class="sec3-right" id="about">
           <h1 class="sec3-title">
             About the <br />International <br />
             Research Conference
@@ -357,7 +381,7 @@
         <div class="container">
           <div class="top">
             <div class="form-container">
-              <form class="form">
+              <form class="form" method="post" action="send_email.php">
                 <div class="input-group">
                   <input class="inp" type="text" name="name" required placeholder="Your Name" />
                   <input class="inp" type="email" name="email" required placeholder="Your Email" />
@@ -367,7 +391,7 @@
                 <button class="submit" type="submit">Send Message</button>
             </div>
             <div class="form-desc">
-              <h1 class="form-h1">CONTACT US FOR FURTHER INFORMATION</h1>
+              <h1 class="form-h1" id="contact">CONTACT US FOR FURTHER INFORMATION</h1>
               <p>Unlock the Gateway to Comprehensive Information: Reach Out to Our Dedicated Team for In-Depth Insights,
                 Personalized Guidance.</p>
               <div class="infoss">
@@ -396,7 +420,7 @@
     </div>
   </div>
   </div>
-  <div class="footer"> 
+  <div class="footer">
     © All rights reserved 2024
   </div>
 </body>
