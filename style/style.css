@@ -22,7 +22,7 @@ html {
 
 .header {
     width: 100%;
-    height: 60px;
+    min-height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -279,7 +279,7 @@ form input[type="submit"] {
 }
 
 .sec1 {
-    background-image: url("./assets/bg.jpeg");
+    background-image: url("../assets/bg.jpeg");
     height: 648px;
     background-size: cover;
     object-fit: cover;
@@ -406,13 +406,13 @@ form input[type="submit"] {
 
 .bg {
     margin: 30px 0;
-    background: url("./assets/bg2.jpg");
+    background: url("../assets/bg2.jpg");
     height: 157px;
     width: 805px;
 }
 
 .sous-bg {
-    background: url("./assets/tt.png");
+    background: url("../assets/tt.png");
     width: 805px;
     height: 157px;
     background-repeat: no-repeat;
@@ -482,7 +482,7 @@ form input[type="submit"] {
     margin-top: 100px;
     height: 1038px;
     width: 100%;
-    background-image: url("./assets/bg3.jpg");
+    background-image: url("../assets/bg3.jpg");
     z-index: 20;
     background-repeat: no-repeat;
     background-size: cover;
@@ -496,7 +496,7 @@ form input[type="submit"] {
 }
 
 .sec3-left {
-    background-image: url(./assets/bg4.png);
+    background-image: url(../assets/bg4.png);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.256);
     background-size: cover;
     background-position: center;
@@ -717,7 +717,7 @@ form input[type="submit"] {
     position: relative;
     Width: 355px;
     Height: 445px;
-    background-image: url(./assets/img2.jpeg);
+    background-image: url(../assets/img2.jpeg);
     background-size: cover;
     background-position: center;
     border-radius: 12px;
@@ -1279,7 +1279,7 @@ form input[type="submit"] {
     margin-top: 100px;
     height: 100%;
     width: 100%;
-    background-image: url("./assets/bg.jpeg");
+    background-image: url("../assets/bg.jpeg");
     opacity: 0.15;
     z-index: 10;
     background-repeat: no-repeat;
@@ -1529,6 +1529,7 @@ input:checked+.slider:before {
 
     .h-cont {
         position: relative;
+        min-height: 70px;
     }
 
     .down-btn {

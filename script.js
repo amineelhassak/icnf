@@ -187,6 +187,7 @@ const submit_from = document.querySelector(".submit-form");
 submit_from.addEventListener("submit", (e) => {
 	e.preventDefault();
 	let data = new FormData(submit_from);
+	data.append("name", "Before 10th May 2024");
 
 	if (R70 === 1)
 		data.append("Social Event", "70");
@@ -210,7 +211,7 @@ const submit_from2 = document.querySelector(".submit-form2");
 submit_from2.addEventListener("submit", (e) => {
 	e.preventDefault();
 	let data = new FormData(submit_from2);
-
+	data.append("name", "From 15th June 2024");
 	if (S70 === 1)
 		data.append("Social Event", "70");
 	if (S200 === 1)
@@ -224,6 +225,5 @@ submit_from2.addEventListener("submit", (e) => {
 	data.forEach((value, key) => {
 		jsonObject[key] = value;
 	});
-
 	console.log(jsonObject);
 });
