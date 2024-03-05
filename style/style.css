@@ -1496,6 +1496,32 @@ input:checked+.slider:before {
     transition: all 0.3s ease-in-out;
 }
 
+/* login style */
+.login-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.login-cont > form{
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.login-inp{
+    width: 100%;
+}
+.login-btn{
+    height: 45px;
+    flex: none !important;
+    border-radius: 20px;
+    color: white !important;
+    background: #13A4C7 !important;
+    margin-left: 0px !important;
+}
+
 @media screen and (max-width : 900px) {
     .container {
         padding: 0 20px;
