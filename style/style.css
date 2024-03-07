@@ -49,7 +49,7 @@ html {
     background-color: inherit;
     font-family: inherit;
     margin: 0;
-  }
+}
 
 .dropdown-content {
     display: none;
@@ -58,7 +58,7 @@ html {
     /* line-height: 50px; */
     background-color: #ffffff;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -69,15 +69,15 @@ html {
     text-decoration: none;
     display: block;
     text-align: left;
-  }
+}
 
-  .dropdown-content a:hover {
+.dropdown-content a:hover {
     background-color: #13A4C7;
-  }
+}
 
-  .dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
-  }
+}
 
 /* .header .dropdown-content a {
     color: rgb(0, 0, 0);
@@ -237,6 +237,7 @@ form input[type="submit"] {
     height: 20px;
     background-color: #70898F;
 }
+
 /* header Links*/
 
 .nav-links {
@@ -279,8 +280,10 @@ form input[type="submit"] {
 }
 
 .sec1 {
-    background-image: url("./assets/bg.jpeg");
+    background-image: url("../assets/bg.jpeg");
     height: 648px;
+    width: 800px;
+    margin-left: 75px;
     background-size: cover;
     object-fit: cover;
     border-radius: 0px 0px 18px 18px;
@@ -318,7 +321,7 @@ form input[type="submit"] {
 
 .card {
     height: 241px;
-    width: 255px;
+    width: 200px;
     background: #ffffff5e;
     transform: translateY(50%);
     box-shadow: 0px 4px 11.89px rgba(0, 0, 0, 0.25);
@@ -365,7 +368,7 @@ form input[type="submit"] {
     z-index: 100;
     bottom: 0;
     display: flex;
-    width: 100%;
+    width: 90%;
     justify-content: space-between;
     padding: 0 50px;
 }
@@ -406,13 +409,13 @@ form input[type="submit"] {
 
 .bg {
     margin: 30px 0;
-    background: url("./assets/bg2.jpg");
+    background: url("../assets/bg2.jpg");
     height: 157px;
     width: 805px;
 }
 
 .sous-bg {
-    background: url("./assets/tt.png");
+    background: url("../assets/tt.png");
     width: 805px;
     height: 157px;
     background-repeat: no-repeat;
@@ -482,7 +485,7 @@ form input[type="submit"] {
     margin-top: 100px;
     height: 1038px;
     width: 100%;
-    background-image: url("./assets/bg3.jpg");
+    background-image: url("../assets/bg3.jpg");
     z-index: 20;
     background-repeat: no-repeat;
     background-size: cover;
@@ -496,7 +499,7 @@ form input[type="submit"] {
 }
 
 .sec3-left {
-    background-image: url(./assets/bg4.png);
+    background-image: url(../assets/bg4.png);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.256);
     background-size: cover;
     background-position: center;
@@ -717,7 +720,7 @@ form input[type="submit"] {
     position: relative;
     Width: 355px;
     Height: 445px;
-    background-image: url(./assets/img2.jpeg);
+    background-image: url(../assets/img2.jpeg);
     background-size: cover;
     background-position: center;
     border-radius: 12px;
@@ -1279,7 +1282,7 @@ form input[type="submit"] {
     margin-top: 100px;
     height: 100%;
     width: 100%;
-    background-image: url("./assets/bg.jpeg");
+    background-image: url("../assets/bg.jpeg");
     opacity: 0.15;
     z-index: 10;
     background-repeat: no-repeat;
@@ -1913,4 +1916,66 @@ input:checked+.slider:before {
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+/*orale and poster instructions*/
+.instructions {
+    align-items: center;
+    text-align: left;
+    margin-top: 10%;
+    background: #efffff5e;
+    padding: 2%;
+    border-radius: 10px;
+    backdrop-filter: blur(7px);
+}
+
+.instructions p {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/*Accomodation Info*/
+.accominfo {
+    text-align: left;
+    margin-top: 10%;
+    background: #efffff5e;
+    padding: 2%;
+    border-radius: 10px;
+    backdrop-filter: blur(7px);
+}
+
+.accominfo p {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.titledown {
+    margin-top: 15%;
+}
+
+/* login-style */
+
+.login-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.login-cont > form{
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.login-inp{
+    width: 100%;
+}
+.login-btn{
+    height: 45px;
+    flex: none !important;
+    border-radius: 20px;
+    color: white !important;
+    background: #13A4C7 !important;
+    margin-left: 0px !important;
 }

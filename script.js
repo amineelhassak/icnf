@@ -38,7 +38,21 @@ let S400 = 0;
 const req = document.getElementById("r-price");
 const std = document.getElementById("s-price");
 
-window.addEventListener("load", () => {
+
+const total1 =  document.getElementById("total1");
+const total2 =  document.getElementById("total2");
+
+window.addEventListener("hashchange", () => {
+	checkR200.checked = false;
+	checkR300.checked = false;
+	checkR450.checked = false;
+	checkR70.checked = false;
+	checkS200.checked = false;
+	checkS400.checked = false;
+	checkS550.checked = false;
+	checkS70.checked = false;
+	localStorage.removeItem("price")
+	localStorage.setItem("price", JSON.stringify({ regPrice: 0, studPrice: 0 }));
 	let data = JSON.parse(localStorage.getItem("price"));
 	req.innerText = "€ " + data.regPrice;
 	std.innerText = "€ " + data.studPrice;
@@ -58,6 +72,7 @@ checkR70.addEventListener("change", (e) => {
 		R70 = 0;
 	}
 	req.innerText = "€ " + data.regPrice;
+	total1.value = data.regPrice;
 	localStorage.setItem("price", JSON.stringify(data));
 })
 
@@ -75,6 +90,7 @@ checkR200.addEventListener("change", (e) => {
 		R200 = 0;
 	}
 	req.innerText = "€ " + data.regPrice;
+	total1.value = data.regPrice;
 	localStorage.setItem("price", JSON.stringify(data));
 })
 
@@ -92,6 +108,7 @@ checkR300.addEventListener("change", (e) => {
 		R300 = 0;
 	}
 	req.innerText = "€ " + data.regPrice;
+	total1.value = data.regPrice;
 	localStorage.setItem("price", JSON.stringify(data));
 })
 
@@ -109,6 +126,7 @@ checkR450.addEventListener("change", (e) => {
 		R450 = 0;
 	}
 	req.innerText = "€ " + data.regPrice;
+	total1.value = data.regPrice;
 	localStorage.setItem("price", JSON.stringify(data));
 })
 
@@ -126,6 +144,7 @@ checkS70.addEventListener("change", (e) => {
 		S70 = 0;
 	}
 	std.innerText = "€ " + data.studPrice;
+	total2.value = data.studPrice;
 	localStorage.setItem("price", JSON.stringify(data));
 })
 
@@ -143,6 +162,7 @@ checkS200.addEventListener("change", (e) => {
 		S200 = 0;
 	}
 	std.innerText = "€ " + data.studPrice;
+	total2.value = data.studPrice;
 	localStorage.setItem("price", JSON.stringify(data));
 })
 
@@ -160,6 +180,7 @@ checkS400.addEventListener("change", (e) => {
 		S400 = 0;
 	}
 	std.innerText = "€ " + data.studPrice;
+	total2.value = data.studPrice;
 	localStorage.setItem("price", JSON.stringify(data));
 })
 
@@ -177,6 +198,7 @@ checkS550.addEventListener("change", (e) => {
 		S550 = 0;
 	}
 	std.innerText = "€ " + data.studPrice;
+	total2.value = data.studPrice;
 	localStorage.setItem("price", JSON.stringify(data));
 })
 
@@ -186,44 +208,28 @@ const submit_from = document.querySelector(".submit-form");
 
 submit_from.addEventListener("submit", (e) => {
 	e.preventDefault();
-	let data = new FormData(submit_from);
-
-	if (R70 === 1)
-		data.append("Social Event", "70");
-	if (R200 === 1)
-		data.append("Accompanying person", "200");
-	if (R300 === 1)
-		data.append("Student", "300");
-	if (R450 === 1)
-		data.append("Regular Participants", "450");
-
-	let jsonObject = {};
-	data.forEach((value, key) => {
-		jsonObject[key] = value;
-	});
-
-	console.log(jsonObject);
+	submit_from.submit()
+	localStorage.removeItem("price")
+	localStorage.setItem("price", JSON.stringify({ regPrice: 0, studPrice: 0 }));
+	let data = JSON.parse(localStorage.getItem("price"));
+	req.innerText = "€ " + data.regPrice;
+	std.innerText = "€ " + data.studPrice;
+	submit_from.reset();
+	// let jsonObject = {};
+	// data.forEach((value, key) => {
+	// 	jsonObject[key] = value;
+	// });
 });
 
 const submit_from2 = document.querySelector(".submit-form2");
 
 submit_from2.addEventListener("submit", (e) => {
 	e.preventDefault();
-	let data = new FormData(submit_from2);
-
-	if (S70 === 1)
-		data.append("Social Event", "70");
-	if (S200 === 1)
-		data.append("Accompanying person", "200");
-	if (S400 === 1)
-		data.append("Student", "400");
-	if (S550 === 1)
-		data.append("Regular Participants", "550");
-
-	let jsonObject = {};
-	data.forEach((value, key) => {
-		jsonObject[key] = value;
-	});
-
-	console.log(jsonObject);
+	submit_from2.submit()
+	localStorage.removeItem("price")
+	localStorage.setItem("price", JSON.stringify({ regPrice: 0, studPrice: 0 }));
+	let data = JSON.parse(localStorage.getItem("price"));
+	req.innerText = "€ " + data.regPrice;
+	std.innerText = "€ " + data.studPrice;
+	submit_from2.reset()
 });
