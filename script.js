@@ -17,7 +17,6 @@ dropDown.addEventListener("click", () => {
 
 localStorage.setItem("price", JSON.stringify({ regPrice: 0, studPrice: 0 }));
 
-
 const checkR450 = document.getElementById("r450");
 let	R450 = 0;
 const checkR70 = document.getElementById("r70");
@@ -38,6 +37,8 @@ let S400 = 0;
 
 const req = document.getElementById("r-price");
 const std = document.getElementById("s-price");
+
+
 const total1 =  document.getElementById("total1");
 const total2 =  document.getElementById("total2");
 
@@ -55,7 +56,6 @@ window.addEventListener("hashchange", () => {
 	let data = JSON.parse(localStorage.getItem("price"));
 	req.innerText = "€ " + data.regPrice;
 	std.innerText = "€ " + data.studPrice;
-	console.log("ha")
 })
 
 checkR70.addEventListener("change", (e) => {
@@ -207,7 +207,7 @@ checkS550.addEventListener("change", (e) => {
 const submit_from = document.querySelector(".submit-form");
 
 submit_from.addEventListener("submit", (e) => {
-e.preventDefault();
+	e.preventDefault();
 	submit_from.submit()
 	localStorage.removeItem("price")
 	localStorage.setItem("price", JSON.stringify({ regPrice: 0, studPrice: 0 }));
@@ -219,14 +219,12 @@ e.preventDefault();
 	// data.forEach((value, key) => {
 	// 	jsonObject[key] = value;
 	// });
-
-	// console.log(jsonObject);
 });
 
 const submit_from2 = document.querySelector(".submit-form2");
 
 submit_from2.addEventListener("submit", (e) => {
-e.preventDefault();
+	e.preventDefault();
 	submit_from2.submit()
 	localStorage.removeItem("price")
 	localStorage.setItem("price", JSON.stringify({ regPrice: 0, studPrice: 0 }));
@@ -234,9 +232,4 @@ e.preventDefault();
 	req.innerText = "€ " + data.regPrice;
 	std.innerText = "€ " + data.studPrice;
 	submit_from2.reset()
-	// let jsonObject = {};
-	// data.forEach((value, key) => {
-	// 	jsonObject[key] = value;
-	// });
-	
 });

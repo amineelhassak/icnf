@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link rel="stylesheet" href="./style/style.css" />
-  <title>INCF - 2 0 2 4</title>
+  <title>ICFN | 2024</title>
 </head>
 
 <body>
@@ -21,11 +20,11 @@
   <!-- The header -->
   <div class="header">
     <div class="container h-cont">
-      <div class="logo">
+    <div class="logo">
         <h1>ICNF</h1>
         <span>2024</span>
       </div>
-       <div class="nav-links">
+      <div class="nav-links">
         <div class="enter">
           <a href="#">HOME</a>
         </div>
@@ -37,39 +36,37 @@
         <div class="dropdown enter">
           <a class="dropbtn" href="#">Guidlines</a>
           <div class="dropdown-content">
-            <a href="#">Orale presentations</a>
-            <a href="#">Poster</a>
+            <a href="orale.php">Orale presentations</a>
+            <a href="poster.php">Poster</a>
           </div>
         </div>
-          <div class="line"></div>
-          <!-- </div> -->
+        <div class="line"></div>
+        <!-- </div> -->
         <div class="enter">
           <a href="#contact">CONTACT</a>
         </div>
-          <div class="line"></div>
-          <div class="enter">
-            <a href="#">COMMITTEES</a>
-          </div>
+        <div class="line"></div>
+        <div class="enter">
+          <a href="#">COMMITTEES</a>
+        </div>
         <div class="line"></div>
         <div class="dropdown enter">
-          <a href="#">Dropdown</a>
+          <a href="#">ICFN 2024</a>
           <div class="dropdown-content">
             <a href="#">Presentations</a>
-            <a href="#">Programmes</a>
+            <a href="#">Program</a>
           </div>
         </div>
         <div class="dropdown enter">
           <a href="#packs" class="btn"><span>REGISTER</span></a>
-        </div>
-      </div>
-       <div class="nav-mobile h-close" id="header">
+          <div class="nav-mobile h-close" id="header">
             <a href="#" class="link-m">HOME</a>
             <a href="#about" class="link-m">ABOUT THE CONFERENCE</a>
             <div class="dropdown">
               <a href="#">Guidlines</a>
               <div class="dropdown-content">
-                <a href="#">Orale presentations</a>
-                <a href="#">Poster</a>
+                <a href="orale.php">Orale presentations</a>
+                <a href="poster.php">Poster</a>
               </div>
             </div>
             <a href="#contact" class="link-m">CONTACT</a>
@@ -78,38 +75,17 @@
               <a href="#">Dropdown</a>
               <div class="dropdown-content">
                 <a href="#">Presentation</a>
-                <a href="#">Programmes</a>
+                <a href="#">Program</a>
               </div>
             </div>
           </div>
-      <!-- here -->
+        </div>
+      </div>
       <div class="down-btn down" id="down-btn">
         <img src="./assets/icons/arrow-down.svg" alt="" srcset="">
       </div>
     </div>
   </div>
-  <!-- The popup -->
-  <div id="popup" class="popup">
-    <div class="first-form-container">
-      <h1>SECURE YOUR SPOT : </h1>
-      <form action="submit" name="register">
-        <input type="text" placeholder="Full name" name="name" autocomplete="off" required>
-        <input type="email" placeholder="Email" name="email" autocomplete="off"><br>
-        <input type="tel" placeholder="Phone number" name="number" autocomplete="off">
-        <select name="academic_specialization" autocomplete="off">
-          <option value="standard" disabled selected>Academic Specialization</option>
-          <option value="bacdeux">Bac +2</option>
-          <option value="bactrois">Bac +3</option>
-          <option value="baccinq">Bac +5</option>
-          <option value="master">Master</option>
-          <option value="doctorat">Doctorat</option>
-        </select><br>
-        <br>
-        <input type="submit" value="Submit">
-      </form>
-    </div>
-  </div>
-
   <div class="container">
     <!--Section 1-->
     <div class="sec1">
@@ -117,8 +93,8 @@
         <h1 class="title">
           International Conference on <span>Nitrogen Fixation</span>
         </h1>
-        <p class="text">
-          "A Global Gathering of Scholars, Researchers, and Innovators at the
+        <p class="text" style="text-align: center;">
+          "A Global Gathering of Scholars, Researchers, and Innovators <br>at the
           International Research Conference"
         </p>
         <div class="card-container">
@@ -129,7 +105,7 @@
             <a href="#" class="btn-2">JOIN US</a>
           </div>
           <div class="card">
-            <div class="card-title">Length</div>
+            <div class="card-title">Program</div>
             <img src="./assets/icons/icon2.svg" alt="icon" class="icon" />
             <p class="card-text">5 days</p>
             <a href="#" class="btn-3">SEE THE PROGRAM</a>
@@ -147,6 +123,8 @@
     </div>
     <!--Section 2-->
   </div>
+
+
   <!--Section 3-->
   <div class="sec3" id="about">
     <div class="bg-sec3">
@@ -234,7 +212,7 @@
       </div>
     </div>
   </div>
-  <div class="container">
+  <div class="container" id="rabat">
     <div class="sec5">
       <div class="con5">
         <h1 class="sec5-title">Morocco, A Tapestry of Timeless Beauty</h1>
@@ -395,8 +373,6 @@
         <form action="/icnf-l/checkout" method="post" class="submit-form sec7-dev2-2 ">
           <div class="div2-title2">
             <p>From 15th June 2024</p>
-            <input type="text" style="display: none;" name="type" value="From 15th June 2024" />
-            <input type="text" style="display: none;" name="total"  value="0" id="total2"/>
             <div class="div-title-sec7" id="s-price">€ 0</div>
           </div>
           <div class="btns">
@@ -430,7 +406,7 @@
                 <span class="slider round"></span>
               </label>
               <p class="p22">Accompanying person</p>
-              <p class="pp">€ 200,00</p>
+              <p class="pp">€ 200</p>
             </div>
           </div>
           <button class="botn2" type="submit">Buy your ticket</button>
