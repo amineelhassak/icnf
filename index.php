@@ -20,7 +20,7 @@
   <!-- The header -->
   <div class="header">
     <div class="container h-cont">
-    <div class="logo">
+      <div class="logo">
         <h1>ICNF</h1>
         <span>2024</span>
       </div>
@@ -331,7 +331,7 @@
           <div class="div2-title">
             <p>Before 10th May 2024</p>
             <input type="text" style="display: none;" name="type" value="Before 10th May 2024" />
-            <input type="text" style="display: none;" name="total"  value="0" id="total1"/>
+            <input type="text" style="display: none;" name="total" value="0" id="total1" />
             <div class="div-title-sec7" id="r-price">€ 0</div>
           </div>
           <div class="btns">
@@ -373,6 +373,8 @@
         <form action="/icnf-l/checkout" method="post" class="submit-form sec7-dev2-2 ">
           <div class="div2-title2">
             <p>From 15th June 2024</p>
+            <input type="text" style="display: none;" name="type" value="From 15th June 2024" />
+            <input type="text" style="display: none;" name="total" value="0" id="total2" />
             <div class="div-title-sec7" id="s-price">€ 0</div>
           </div>
           <div class="btns">
@@ -426,8 +428,7 @@
                   <input class="inp" type="text" name="name" required placeholder="Your Name" />
                   <input class="inp" type="email" name="email" required placeholder="Your Email" />
                 </div>
-                <textarea class="text-area" name="message" id="" cols="30" rows="10"
-                  placeholder="Enter message"></textarea>
+                <textarea class="text-area" name="message" id="" cols="30" rows="10" placeholder="Enter message"></textarea>
                 <button class="submit" type="submit">Send Message</button>
             </div>
             <div class="form-desc">

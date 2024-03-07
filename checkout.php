@@ -108,6 +108,32 @@ if (!isset($_POST["type"])) {
         </div>
     </div>
     </div>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div>
+                <form action="./scripts/add_order.php" method="post">
+                    <h1>UPLOAD FILES</h1>
+                    <div>
+                        <input type="text" required placeholder="Name">
+                        <input type="text" required placeholder="CIN">
+                        <div>
+                            <label for="choose-file" class="chose">Upload Signature</label>
+                            <input name="signature" type="file" id="choose-file" accept=".pdf,doc,docx" style="display: none;" />
+                        </div>
+                        <div>
+                            <label for="choose-files" class="chose">Upload Payment screenshot</label>
+                            <input name="screenshot" type="file" id="choose-files" accept=".png,.jpeg,.jpg" style="display: none;" />
+                        </div>
+                    </div>
+                    <button type="submit">SEND</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
 
     <script src="https://unpkg.com/jspdf-invoice-template@1.4.0/dist/index.js"></script>
     <script src="./script.js"></script>
