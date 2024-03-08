@@ -4,21 +4,21 @@ console.log(data);
 
 
 const download = document.querySelector(".download");
-let all = document.querySelectorAll(".elem");
+let all = document.querySelectorAll(".dt");
 let fname =document.querySelector(".fname");
 let lname =document.querySelector(".lname");
-let cne =document.querySelector(".cne");
+let cne =document.querySelector(".cin");
 console.log(all)
 let finalData = [];
 all.forEach((item) =>{
-   let res = item.innerText.split("\n");
-   finalData.push({name : res[0], price : res[2], qte : 1})
+    let data = item.querySelectorAll("td");
+   finalData.push({name : data[0].innerText, price : data[1].innerText, qte : 1})
 })
 
 
 download.addEventListener("click", ()=>{
 
-   if (!fname.value || !lname.value || !cne.value  )
+   if (!fname.value || !cne.value  )
        return;
    let props = {
    outputType: jsPDFInvoiceTemplate.OutputType.Save,
@@ -57,8 +57,8 @@ download.addEventListener("click", ()=>{
    },
    contact: {
        label: data.type,
-       name: fname.value + " " + lname.value,
-       address: "CNE : " + cne.value,
+       name: fname.value,
+       address: "CIN : " + cne.value,
    },
    invoice: {
        label: "Order : " + data.type,
@@ -98,7 +98,7 @@ download.addEventListener("click", ()=>{
            item.price,
            item.qte,
            "",
-           item.price
+           item.price,
        ])),
        additionalRows: [{
            col1: 'Total:',
@@ -150,7 +150,7 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
- modal.style.display = "block";
+ modal.style.display = "flex";
 }
 
 // When the user clicks on <span> (x), close the modal

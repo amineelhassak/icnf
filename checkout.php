@@ -19,122 +19,166 @@ if (!isset($_POST["type"])) {
 
 <body class="body-check">
 
-    <div class="container card-conts">
-        <div class="left">
-            <div>
-                <img class="card-logo" src="./assets/icons/icon1.svg" alt="" srcset="">
+    <div class="wrapper">
+        <form action="">
+            <div class="col-3">
+                <input class="effect-1 fname" type="text" placeholder="Full Name">
+                <span class="focus-border"></span>
             </div>
-            <div class="card-content">
-                <div class="card-title">
-                    <?php echo $_POST["type"]; ?>
-                </div>
-                <div class="desc">
-                    Offre : <?php echo $_POST["type"]; ?>
-                </div>
-                <div class="price">
-                    <p>total : </p>
-                    <h1>€ <?php echo $_POST["total"]; ?></h1>
-                </div>
-                <form class="card-form">
-                    <div class="inp-group">
-                        <input class="fname" type="text" required placeholder="First name" />
-                        <input class="lname" type="text" required placeholder="Last name" />
-                    </div>
-                    <input class="cne" type="text" required placeholder="CNE" />
-                </form>
+            <div class="col-3">
+                <input class="effect-1 cin" type="text" placeholder="CIN">
+                <span class="focus-border"></span>
             </div>
-
-        </div>
-        <div class="right">
-            <div class="div">
-                <h1>TOTAL</h1>
-            </div>
-            <div class="div">
+        </form>
+        <div class="group">
+            <table>
                 <?php
 
                 if (isset($_POST["450"]) && $_POST["type"] == "Before 10th May 2024")
-                    echo "<div class='elem'>
-                    <p>Regular Participants</p>
-                    <p>€ 450</p>
-                    </div>";
+                    echo "<tr class='dt'>
+                    <td class='item-details'>Regular Participants</td>
+                    <td class='item-price'>€ 450</td>
+                    </tr>";
                 if (isset($_POST["70"]) && $_POST["type"] == "Before 10th May 2024")
-                    echo "<div class='elem'>
-                    <p>Social Event</p>
-                    <p>€ 70</p>
-                    </div>";
+                    echo "<tr class='dt'>
+                    <td class='item-details'>Social Event</td>
+                    <td class='item-price'>€ 70</td>
+                    </tr>";
                 if (isset($_POST["300"]) && $_POST["type"] == "Before 10th May 2024")
-                    echo "<div class='elem'>
-                    <p>Student</p>
-                    <p>€ 300</p>
-                    </div>";
+                    echo "<tr class='dt'>
+                    <td class='item-details'>Student</td>
+                    <td class='item-price'>€ 300</td>
+                    </tr>";
                 if (isset($_POST["200"]) && $_POST["type"] == "Before 10th May 2024")
-                    echo "<div class='elem'>
-                    <p>Accompanying person</p>
-                    <p>€ 200</p>
-                    </div>";
+                    echo "<tr class='dt'>
+                    <td class='item-details'>Accompanying person</td>
+                    <td class='item-price'>€ 200</td>
+                    </tr>";
 
                 //the other one
                 if (isset($_POST["550"]) && $_POST["type"] == "From 15th June 2024")
-                    echo "<div class='elem'>
-                    <p>Regular Participants</p>
-                    <p>€ 550</p>
-                    </div>";
+                    echo "<tr class='dt'>
+                    <td class='item-details'>Regular Participants</td>
+                    <td class='item-price' >€ 550</td>
+                    </tr>";
                 if (isset($_POST["70"]) && $_POST["type"] == "From 15th June 2024")
-                    echo "<div class='elem'>
-                    <p>Social Event</p>
-                    <p>€ 70</p>
-                    </div>";
+                    echo "<tr class='dt'>
+                    <td class='item-details'>Social Event</td>
+                    <td class='item-price'>€ 70</td>
+                    </tr>";
                 if (isset($_POST["400"]) && $_POST["type"] == "From 15th June 2024")
-                    echo "<div class='elem'>
-                    <p>Student</p>
-                    <p>€ 400</p>
-                    </div>";
+                    echo "<tr class='dt'>
+                    <td class='item-details'>Student</td>
+                    <td class='item-price'>€ 400</td>
+                    </tr>";
                 if (isset($_POST["200"]) && $_POST["type"] == "From 15th June 2024")
-                    echo "<div class='elem'>
-                    <p>Accompanying person</p>
-                    <p>€ 200</p>
-                    </div>";
+                    echo "<tr class='dt'>
+                    <td class='item-details'>Accompanying person</td>
+                    <td class='item-price'>€ 200</td>
+                    </tr>";
                 ?>
+
+            </table>
+        </div>
+
+        <div class="divider"></div>
+        <table>
+            <tr class="dt">
+                <td style="font-size:17px;" class="item-qty">Total</td>
+                <td style="font-size:17px;" class="item-price">€ <?php echo $_POST["total"]; ?></td>
+            <tr>
+
+        </table>
+
+        <div class="group">
+            <button class="download ">Download</button>
+        </div>
+        <div class="group">
+            <button class="upload">Upload</button>
+        </div>
+
+    </div>
+
+    <!-- <div class="div">
+                <h1>TOTAL</h1>
+            </div>
+            <div class="div">
+
             </div>
             <div class="div">
                 <div class="elem">
                     <p>Total</p>
                     <p class="total">€ <?php echo $_POST["total"]; ?></p>
-                </div>
-            </div>
-            <di class="btns-group">
-                <button class="download">DOWNLOAD</button>
-                <button class="upload">UPLOAD</button>
-        </div>
+                </div> -->
     </div>
-    </div>
+
     <div id="myModal" class="modal">
 
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <div>
-                <form action="./scripts/add_order.php" enctype="multipart/form-data" method="post">
-                    <h1>UPLOAD FILES</h1>
-                    <div>
-                        <input name="name" type="text" required placeholder="Name">
-                        <input name="cin" type="text" required placeholder="CIN">
-                        <div>
-                            <label for="choose-file" class="chose">Upload Signature</label>
-                            <input name="signature" type="file" id="choose-file" accept=".pdf,doc,docx" style="display: none;" />
-                        </div>
-                        <div>
-                            <label for="choose-files" class="chose">Upload Payment screenshot</label>
-                            <input name="screenshot" type="file" id="choose-files" accept=".png,.jpeg,.jpg" style="display: none;" />
+            <form action="./scripts/add_order.php" enctype="multipart/form-data" method="post">
+                <div class="mod-rp">
+                    <div class="conv-box my-dropzone">
+                        <div class="conv-box-avatar"></div>
+                        <div class="conv-box-upload dz-clickable" style="background-color: rgba(52,203,230, 0.05);">
+                            <div class="drop-wrapper dz-clickable">
+                                <div class="icon-wrapper">
+                                    <span class="doc">
+                                        <svg width="41.652204095800066" height="55.81395348837209" viewBox="0 0 53 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.58567 35.8724L9.4577 20.7771C9.91405 18.998 11.743 17.9158 13.5221 18.3721L38.3216 24.7333L42.3319 9.09887C42.484 8.50584 42.1233 7.89618 41.5302 7.74406L22.122 2.76574L20.186 10.3134C19.7296 12.0925 17.9006 13.1747 16.1215 12.7184L8.57386 10.7824L0.276657 43.1295C0.124542 43.7225 0.48529 44.3322 1.07832 44.4843L30.1907 51.9518C30.7838 52.1039 31.3934 51.7432 31.5455 51.1501L32.7901 46.2981L7.99066 39.9369C6.21157 39.4805 5.12932 37.6515 5.58567 35.8724ZM24.2223 12.4979L36.0829 15.5402C36.676 15.6924 37.0367 16.302 36.8846 16.895C36.7325 17.4881 36.1228 17.8488 35.5298 17.6967L23.6692 14.6544C23.0762 14.5023 22.7154 13.8926 22.8675 13.2996C23.0196 12.7066 23.6293 12.3458 24.2223 12.4979ZM16.6747 10.5619L10.6365 9.0131L19.5783 3.72212L18.0295 9.76025C17.8774 10.3533 17.2677 10.714 16.6747 10.5619ZM46.3943 29.1024L12.969 20.5286C12.376 20.3765 11.7663 20.7372 11.6142 21.3303L7.74214 36.4256C7.59003 37.0186 7.95078 37.6283 8.54381 37.7804L41.9692 46.3542C42.5622 46.5063 43.1719 46.1455 43.324 45.5525L47.196 30.4572C47.3481 29.8642 46.9874 29.2545 46.3943 29.1024ZM20.184 32.7219C19.5755 35.094 17.1368 36.537 14.7647 35.9285L12.6082 35.3754C12.0152 35.2233 11.6545 34.6136 11.8066 34.0206L14.0192 25.3947C14.1713 24.8017 14.7809 24.4409 15.374 24.593L17.5305 25.1462C19.9026 25.7546 21.3456 28.1933 20.7371 30.5654L20.184 32.7219ZM30.828 36.0267C30.2887 38.1293 28.1888 39.3719 26.0862 38.8326C23.9836 38.2932 22.7411 36.1933 23.2804 34.0907L24.1101 30.856C24.6494 28.7535 26.7494 27.5109 28.8519 28.0502C30.9545 28.5895 32.1971 30.6895 31.6578 32.792L30.828 36.0267ZM37.4217 39.4418C38.0687 39.6078 38.7585 39.3825 39.1802 38.8586C39.4525 38.4688 39.9391 38.3638 40.3165 38.4606C40.4783 38.5021 40.5861 38.5297 40.7202 38.679C41.204 39.033 41.3076 39.7491 40.8997 40.219C39.961 41.4147 38.3781 41.9855 36.8686 41.5983C34.766 41.059 33.5234 38.959 34.0628 36.8565L34.8925 33.6218C35.4318 31.5192 37.5318 30.2766 39.6343 30.8159C41.1438 31.2031 42.2704 32.4114 42.5039 33.9653C42.5812 34.5597 42.1996 35.1513 41.6052 35.2287C41.4158 35.295 41.2541 35.2535 41.1463 35.2259C40.715 35.1153 40.4067 34.7489 40.3418 34.33C40.2243 33.6678 39.7281 33.1384 39.0812 32.9724C38.1647 32.7373 37.284 33.2584 37.049 34.1749L36.2192 37.4096C35.998 38.2722 36.5052 39.2067 37.4217 39.4418ZM18.5806 30.0123L18.0275 32.1687C17.7233 33.3548 16.5039 34.0763 15.3179 33.7721L14.2396 33.4955L15.8991 27.0261L16.9773 27.3026C18.1634 27.6069 18.8849 28.8262 18.5806 30.0123ZM29.5013 32.2389L28.6716 35.4736C28.4503 36.3362 27.5559 36.9112 26.6394 36.6761C25.7229 36.441 25.2156 35.5065 25.4369 34.6439L26.2666 31.4092C26.5017 30.4927 27.3823 29.9716 28.2988 30.2067C29.2153 30.4418 29.7364 31.3224 29.5013 32.2389Z" fill="#34cbe6" fill-opacity="0.34"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="file">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="41.652204095800066" height="55.81395348837209" viewBox="0 0 38 42" fill="none">
+                                            <path d="M35.4812 9.27394L26.5443 1.47994C26.3716 1.32855 26.1636 1.26086 25.9205 1.27688L8.89799 2.31693C8.2092 2.36231 7.57961 2.68864 7.12544 3.20687C6.67126 3.72511 6.43035 4.39207 6.47573 5.08086L6.70261 8.52482L3.29917 8.74904C2.61038 8.79442 1.98079 9.12075 1.52394 9.59847C1.06977 10.1167 0.828855 10.7837 0.874232 11.4725L2.67598 38.8215C2.76941 40.2396 4.02181 41.3372 5.43991 41.2438L29.1019 39.685C30.5201 39.5915 31.6176 38.3391 31.5242 36.921L31.2973 33.4771L34.7413 33.2502C36.1594 33.1568 37.2597 31.9449 37.1636 30.4863L35.8049 9.86301C35.751 9.6631 35.6135 9.428 35.4812 9.27394ZM29.7793 36.9953C29.8113 37.4815 29.4302 37.8728 28.9845 37.9022L5.32247 39.4611C4.83626 39.4931 4.44491 39.1119 4.41555 38.6663L2.61647 11.3577C2.60046 11.1146 2.66814 10.9066 2.81954 10.7339C2.97093 10.5612 3.16817 10.4668 3.41128 10.4508L6.85524 10.2239L8.31532 32.3868C8.40875 33.8049 9.62064 34.9051 11.0793 34.809L29.5956 33.5892L29.8198 36.9926L29.7793 36.9953ZM35.3808 30.6037C35.4128 31.0899 35.0722 31.4786 34.586 31.5106L10.924 33.0695C10.4378 33.1015 10.0491 32.7609 10.017 32.2747L8.21796 4.96608C8.20195 4.72298 8.26964 4.51506 8.42103 4.34231C8.57242 4.16956 8.76967 4.07518 9.01277 4.05917L25.1818 3.03465L25.6783 10.5708C25.7103 11.0571 26.099 11.3977 26.5852 11.3657L34.1214 10.8692L35.4213 30.601L35.3808 30.6037Z" fill="#34cbe6" fill-opacity="0.34"></path>
+                                            <path d="M25.7071 22.1253L24.7583 23.1644C24.4176 23.5531 23.8072 23.5526 23.4537 23.1283L19.9726 19.0848C19.5759 18.6227 18.8493 18.7112 18.5572 19.2188L13.7423 28.285C13.415 28.8763 13.8682 29.5789 14.557 29.5335L30.4397 28.4871C31.1285 28.4418 31.483 27.6452 31.0404 27.1047L27.0144 22.2019C26.7014 21.7749 26.091 21.7744 25.7071 22.1253Z" fill="#34cbe6" fill-opacity="0.34"></path>
+                                            <path d="M27.6458 19.4351C28.8766 19.354 29.8086 18.2906 29.7275 17.0598C29.6464 15.8291 28.583 14.8971 27.3522 14.9782C26.1215 15.0593 25.1895 16.1227 25.2706 17.3534C25.3517 18.5842 26.4151 19.5162 27.6458 19.4351Z" fill="#34cbe6" fill-opacity="0.34"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="pdf">
+                                        <svg width="41.652204095800066" height="55.81395348837209" viewBox="0 0 56 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.1893 17.4237L3.65562 18.8393L9.68767 9.47059L11.1032 16.0042C11.2422 16.6459 10.831 17.2847 10.1893 17.4237ZM15.9739 49.7614L42.8085 43.9476L43.946 49.1978C44.085 49.8395 43.6737 50.4783 43.032 50.6173L11.5305 57.4423C10.8888 57.5813 10.25 57.17 10.111 56.5283L2.52775 21.5266L10.6948 19.7572C12.6199 19.3401 13.8537 17.4238 13.4367 15.4987L11.6672 7.33162L32.6683 2.78167C33.31 2.64264 33.9487 3.05392 34.0878 3.69561L37.753 20.6131L10.9184 26.4269C8.99326 26.844 7.75943 28.7603 8.17651 30.6854L11.7154 47.0196C12.1324 48.9447 14.0488 50.1785 15.9739 49.7614ZM17.4424 17.0738C17.5814 17.7155 18.2202 18.1268 18.8619 17.9878L31.6958 15.2072C32.3375 15.0682 32.7488 14.4294 32.6098 13.7877C32.4708 13.146 31.832 12.7348 31.1903 12.8738L18.3563 15.6543C17.7146 15.7933 17.3034 16.4321 17.4424 17.0738ZM50.1786 21.5855L53.7174 37.9197C53.8564 38.5614 53.4452 39.2001 52.8035 39.3392L15.4683 47.428C14.8266 47.567 14.1878 47.1557 14.0488 46.514L10.51 30.1799C10.3709 29.5382 10.7822 28.8994 11.4239 28.7604L48.7591 20.6716C49.4008 20.5325 50.0395 20.9438 50.1786 21.5855ZM24.7342 33.8163C24.2413 31.5412 22.041 30.1246 19.7659 30.6175L16.8491 31.2495C16.2074 31.3885 15.7962 32.0273 15.9352 32.669L17.9574 42.0027C18.0964 42.6444 18.7352 43.0557 19.3769 42.9167C20.0186 42.7777 20.4299 42.1389 20.2908 41.4972L19.7853 39.1637L21.5354 38.7846C23.8105 38.2917 25.2271 36.0914 24.7342 33.8163ZM36.5278 31.8719C35.9717 29.3052 33.4166 27.66 30.8498 28.2162L28.5164 28.7217C27.8747 28.8607 27.4634 29.4995 27.6024 30.1412L29.6246 39.475C29.7636 40.1167 30.4024 40.528 31.0441 40.3889L33.3776 39.8834C35.9444 39.3273 37.5895 36.7722 37.0334 34.2054L36.5278 31.8719ZM47.4367 25.844C47.2977 25.2023 46.6589 24.791 46.0172 24.9301L40.1836 26.1939C39.5419 26.333 39.1306 26.9718 39.2697 27.6134L41.2919 36.9472C41.4309 37.5889 42.0697 38.0002 42.7114 37.8612C43.3531 37.7222 43.7643 37.0834 43.6253 36.4417L43.1198 34.1082L45.4532 33.6027C46.0949 33.4637 46.5062 32.8249 46.3671 32.1832C46.2281 31.5415 45.5893 31.1302 44.9476 31.2692L42.6142 31.7748L41.8559 28.2746L46.5228 27.2635C47.1645 27.1245 47.5757 26.4857 47.4367 25.844ZM20.2715 32.951L18.5214 33.3301L19.2797 36.8303L21.0298 36.4511C22.0215 36.2363 22.603 35.2553 22.4007 34.3219C22.1859 33.3302 21.2632 32.7361 20.2715 32.951ZM31.3554 30.5496L30.1886 30.8024L31.7053 37.8027L32.872 37.5499C34.1554 37.2719 34.978 35.9943 34.6999 34.7109L34.1944 32.3775C33.9163 31.0941 32.6388 30.2715 31.3554 30.5496Z" fill="#34cbe6" fill-opacity="0.34"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="cont-btn">
+                                    <label for="sign">
+                                        <div class="drop-btn dz-clickable" style="background-color: rgba(52,203,230, 1); font-size:10px; height:45.81395348837209px;">
+                                            <svg width="72" height="49" viewBox="0 0 72 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8538 14.9036C18.4181 6.28866 26.465 0 36 0C45.535 0 53.5819 6.28866 56.1463 14.9036C65.0203 15.6072 72 22.959 72 31.9242C72 41.3549 64.2769 49 54.7499 49H17.25C7.72308 49 0 41.3549 0 31.9242C0 22.959 6.97979 15.6072 15.8538 14.9036ZM27.4991 23.5775C26.6204 24.4472 26.6204 25.8575 27.4991 26.7273C28.3779 27.597 29.8024 27.597 30.681 26.7273L33.9995 23.4423V35.3894C33.9995 36.6195 35.0069 37.6166 36.2495 37.6166C37.4922 37.6166 38.4995 36.6195 38.4995 35.3894V23.4423L41.8181 26.7273C42.6967 27.597 44.1214 27.597 45 26.7273C45.8786 25.8575 45.8786 24.4472 45 23.5775L37.8405 16.4903C36.9619 15.6205 35.5372 15.6205 34.6586 16.4903L27.4991 23.5775Z" fill="#fff"></path>
+                                            </svg>
+                                            UPLOAD SIGNATURE
+                                        </div>
+                                    </label>
+                                    <input type="file" name="signature" id="sign" accept=".pdf,doc,docx" style="display:none;">
+                                </div>
+                                <div class="cont-btn">
+                                    <label for="screen">
+                                        <div class="drop-btn dz-clickable" style="background-color: rgba(52,203,230, 1); font-size:10px; height:45.81395348837209px;">
+                                            <svg width="72" height="49" viewBox="0 0 72 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8538 14.9036C18.4181 6.28866 26.465 0 36 0C45.535 0 53.5819 6.28866 56.1463 14.9036C65.0203 15.6072 72 22.959 72 31.9242C72 41.3549 64.2769 49 54.7499 49H17.25C7.72308 49 0 41.3549 0 31.9242C0 22.959 6.97979 15.6072 15.8538 14.9036ZM27.4991 23.5775C26.6204 24.4472 26.6204 25.8575 27.4991 26.7273C28.3779 27.597 29.8024 27.597 30.681 26.7273L33.9995 23.4423V35.3894C33.9995 36.6195 35.0069 37.6166 36.2495 37.6166C37.4922 37.6166 38.4995 36.6195 38.4995 35.3894V23.4423L41.8181 26.7273C42.6967 27.597 44.1214 27.597 45 26.7273C45.8786 25.8575 45.8786 24.4472 45 23.5775L37.8405 16.4903C36.9619 15.6205 35.5372 15.6205 34.6586 16.4903L27.4991 23.5775Z" fill="#fff"></path>
+                                            </svg>
+                                            UPLOAD SCREENSHOT
+                                        </div>
+                                    </label>
+                                    <input type="file" name="screenshot" id="screen" accept=".png,.jpeg,.jpg" style="display:none;">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <button type="submit">SEND</button>
-                </form>
-            </div>
+                    <div style="margin:20px 0;">
+                        <input class="effect-1" name="name" type="text" required placeholder="Name">
+                        <input class="effect-1" name="cin" type="text" required placeholder="CIN">
+                    </div>
+                    <button class="btn-send" type="submit">SEND</button>
+
+                </div>
+            </form>
         </div>
 
     </div>
-
     <script src="https://unpkg.com/jspdf-invoice-template@1.4.0/dist/index.js"></script>
     <script src="./script.js"></script>
     <script type="text/javascript">

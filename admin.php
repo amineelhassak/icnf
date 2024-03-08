@@ -42,13 +42,15 @@ $res = mysqli_query($conn, $sql);
     <!--  -->
     <div class="body">
         <div class="div1">
-            <form action="./scripts/logout.php">
-                <img src="./icon1.svg" alt="icon1" />
-                <button type="submit" class="btnn">Logout</button>
-            </form>
-            <div class="logo">
-                <h1>ICNF</h1>
-                <span>2024</span>
+            <div class="cnt">
+                <form class="ccc" action="./scripts/logout.php">
+                    <img src="./icon1.svg" alt="icon1" />
+                    <button type="submit" class="btnn">Logout</button>
+                </form>
+                <div class="logo">
+                    <h1>ICNF</h1>
+                    <span>2024</span>
+                </div>
             </div>
         </div>
         <div class="div2">
@@ -60,55 +62,59 @@ $res = mysqli_query($conn, $sql);
                         <tr id="tr1">
                             <th></th>
                             <th scope="col">id</th>
+                            <th scope="col">Customer name</th>
                             <th scope="col">cin</th>
                             <th scope="col">date</th>
-                            <th scope="col">Customer name</th>
                             <th scope="col">payment screen</th>
                             <th scope="col">document</th>
-                            <th scope="col">Action</th>
+                            <th scope="col">Validate</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
 
                         while ($row = mysqli_fetch_assoc($res)) {
-                            echo "<tr>";
-                            echo "<td></td>";
+                            echo "<tr class='data-row' >";
+                            echo "<td><div class='" . ($row["validate"] == 0 ? "red" : "green") . "'></div></td>";
                             echo "<td>" . $row['id'] . "</td>";
+                            echo "<td>" . $row['customer'] . "</td>";
                             echo "<td>" . $row['cin'] . "</td>";
                             echo "<td>" . $row['date'] . "</td>";
-                            echo "<td>" . $row['customer'] . "</td>";
                             echo "<td><a href='" . substr($row['screenshot'], 1) . "' download>Download Screenshot</a></td>";
                             echo "<td><a href='" . substr($row['document'], 1) . "' download>Download Signature</a></td>";
                             echo '<td>
-                                <button id = "' . $row["id"] . '" type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal">
-                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                <button  id = "' . $row["validate"] . ' ' . $row["id"] . ' ' . $row["cin"] . ' ' . $row["customer"] . '" type="button" class="btn btn-light model_btn" data-toggle="modal" data-target="#exampleModal">
+                                    <i style="pointer-events:none;" class="fa fa-check" aria-hidden="true"></i>
                                 </button>
                             </td>';
                             echo "</tr>";
                         }
 
                         echo "</table>";
+                        mysqli_free_result($res);
                         ?>
                     </tbody>
                 </table>
                 <nav class="nav-u" aria-label="...">
                     <ul class="pagination justify-content-center pagination-sm">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1">1</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" tabindex="-1">2</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" tabindex="-1">3</a>
-                        </li>
+                        <?php
+                        $total = "SELECT COUNT(*) AS total FROM `order`;";
+                        $ress = mysqli_query($conn, $total);
+                        $rowTotal = mysqli_fetch_assoc($ress);
+                        $totalRecords = $rowTotal["total"];
+                        $totalPages = ceil($totalRecords / $records);
+                        for ($i = 1; $i <= $totalPages; $i++) {
+                            echo '<li class="page-item">
+                            <a class="page-link" href="#" tabindex="' . $i . '">' . $i . '</a>
+                        </li>';
+                        }
+                        ?>
                     </ul>
                 </nav>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <form action="scripts/update_status.php" method="post" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -119,17 +125,18 @@ $res = mysqli_query($conn, $sql);
                 </div>
                 <div class="modal-body">...</div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                        yes
+                    <button type="submit" id="to-conferm" class="btn btn-primary">
+                        Conferm
                     </button>
-                    <button type="button" class="btn btn-">no</button>
+                    <button class="btn btn-" data-dismiss="modal">Cancel</button>
                 </div>
             </div>
         </div>
-    </div>
+    </form>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./admin.js"></script>
     </div>
 </body>
 

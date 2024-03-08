@@ -15,17 +15,20 @@
   <!--blue bar-->
   <!-- The header -->
   <?php include 'header.php'; ?>
-  <div class="container">
-    <!--Section 1-->
-    <div class="sec1"></div>
-      <div class="wrapper">
-        <h1 class="title">
-          International Conference on <span>Nitrogen Fixation</span>
-        </h1>
-        <p class="text" style="text-align: center;">
-          "A Global Gathering of Scholars, Researchers, and Innovators <br>at the
-          International Research Conference"
-        </p>
+  <div class="kkkk">
+    <?php include 'leftaside.php'; ?>
+    <div class="container">
+      <!--Section 1-->
+      <div class="sec1">
+        <div class="wrapper">
+          <h1 class="title">
+            International Conference on <span>Nitrogen Fixation</span>
+          </h1>
+          <p class="text" style="text-align: center;">
+            "A Global Gathering of Scholars, Researchers, and Innovators <br>at the
+            International Research Conference"
+          </p>
+        </div>
         <div class="card-container">
           <div class="card">
             <div class="card-title">Date</div>
@@ -50,10 +53,10 @@
         </div>
       </div>
     </div>
-    <!--Section 2-->
+    <?php include 'rightaside.php'; ?>
   </div>
 
-
+  </div>
   <!--Section 3-->
   <div class="sec3" id="about">
     <div class="bg-sec3">
@@ -64,49 +67,20 @@
           <div class="borde borde-r"></div>
         </div>
         <div class="sec3-right">
-          <h1 class="sec3-title">
-            About the <br />International <br />
-            Research Conference
-          </h1>
           <p>
-            Explore the International Research Conference, where diverse
-            scholarly events converge in a comprehensive program. Spanning a
-            designated timeframe, this high-quality conference offers
-            exceptional value to students, academics, and industry
-            researchers, fostering collaborative knowledge exchange.
+            From September 09 to 13, 2024, we will be delighted to welcome all participants to the 22nd International Conference on Nitrogen Fixation (ICNF), to be held at the Faculty of Sciences, Mohammed V University in Rabat, Morocco.
+            This biennial international conference, originally scheduled for October 2021 after the last version held in Wuhan, China, in 2019, has been postponed several times owing to the COVID-19 pandemic. The ICNF usually brings together scientists interested in different aspects of biological nitrogen fixation.
+            The novelty with this edition is that it will be held in conjunction with the 20th Congress of the African Association for Nitrogen Fixation. This joint event will enable a larger number of colleagues from different African countries to share their work face to face with their peers from all over the world.
+            The topics to be addressed in this upcoming conference edition will be wide-ranging, bringing together researchers from a variety of disciplines, including chemists, biochemists, plant physiologists, evolutionary biologists, ecologists, agronomists, agricultural officers and inoculant producers. We hope that there will be a more human dimension involving Third World projects, with topics on agriculture, and the environmental conditions in Africa, Latin America and elsewhere.
+            Satellite meetings on subjects not covered by the ICNF2024 program may be organized by individual leaders wishing to take the initiative.
+            It is no coincidence that the Faculty of Science at Mohammed V University in Rabat has been designated as the venue for this global event. This faculty was the country's
           </p>
-          <div class="parag">
-            Join us in the pursuit of cutting-edge research discussions.
-          </div>
         </div>
-        <div class="c">
-          <div class="cart-1">
-            <img src="./assets/icons/icon4.svg" alt="icon" class="icon-" />
-            <h3>Conference Focus:</h3>
-            <p>
-              The International Research Conference unites diverse scholarly
-              events, fostering knowledge exchange and collaboration across
-              research domains.
-            </p>
-          </div>
-          <div class="cart-1">
-            <img src="./assets/icons/icon5.svg" alt="icon" class="icon-" />
-            <h3>Dynamic Events:</h3>
-            <p>
-              Our events adapt to timeframes based on presentation volume and
-              length, ensuring a flexible and engaging conference experience.
-            </p>
-          </div>
-          <div class="cart-1">
-            <img src="./assets/icons/icon6.svg" alt="icon" class="icon-" />
-            <h3>Value Proposition:</h3>
-            <p>
-              Committed to high quality, the conference delivers exceptional
-              value for students, academics, and industry researchers through
-              insightful presentations and networking opportunities.
-            </p>
-          </div>
-        </div>
+      </div>
+      <div class="cnt container">
+        <p>
+          first home for biology, and for a while housed the first Moroccan parliament. Rabat, the capital of Morocco, was founded by the Almohad dynasty in 1150. The city is located on the Atlantic coast in the north-west of the kingdom, right on the left bank of the Bouregreg river. The climate in Rabat is Mediterranean, with cool rainy winters, and moderately hot summers with temperatures rarely exceeding 30°C. The nights, in turn, are always cool, and the humidity of the Atlantic Ocean is noticeable.
+        </p>
       </div>
     </div>
   </div>
@@ -260,7 +234,7 @@
           <div class="div2-title">
             <p>Before 10th May 2024</p>
             <input type="text" style="display: none;" name="type" value="Before 10th May 2024" />
-            <input type="text" style="display: none;" name="total"  value="0" id="total1"/>
+            <input type="text" style="display: none;" name="total" value="0" id="total1" />
             <div class="div-title-sec7" id="r-price">€ 0</div>
           </div>
           <div class="btns">
@@ -357,8 +331,7 @@
                   <input class="inp" type="text" name="name" required placeholder="Your Name" />
                   <input class="inp" type="email" name="email" required placeholder="Your Email" />
                 </div>
-                <textarea class="text-area" name="message" id="" cols="30" rows="10"
-                  placeholder="Enter message"></textarea>
+                <textarea class="text-area" name="message" id="" cols="30" rows="10" placeholder="Enter message"></textarea>
                 <button class="submit" type="submit">Send Message</button>
             </div>
             <div class="form-desc">
