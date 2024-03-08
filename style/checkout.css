@@ -1,0 +1,151 @@
+
+.body-check{
+	background-color: #e7e6e6;
+}
+.card-conts {
+	display: flex;
+justify-content: center;
+column-gap: 40px;
+align-items: flex-start;
+margin: 100px auto;
+}
+.card-conts .left, .card-conts .right{
+	background-color: white;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.224);
+}
+.card-conts .left{
+	display: flex;
+	justify-content: flex-start;
+	width: 50%;
+	max-width: 500px ;
+	column-gap: 20px;
+}
+
+.card-logo {
+	height: 100px ;
+}
+.card-content {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
+.desc {
+	color: gray;
+}
+.price {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.right{
+	min-width: 300px ;
+	display: flex;
+	flex-direction: column;
+}
+.div{
+	margin: 10px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.255);
+}
+.elem {
+	width: 100%;
+	padding: 20px 10px;
+	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.113);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.btns-group{
+	margin-top: 10px;
+	align-self: center;
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	row-gap: 20px;
+}
+.btns-group button {
+	width: 100%;
+	padding: 5px 10px;
+	background: #3eb100;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	border: none;
+	line-height: 20px;
+	font-size: 18px;
+	height: 50px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+
+}
+.btns-group button:hover{
+	background: #4ec60d;
+}
+@media screen and (max-width : 900px) {
+	.card-conts{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		row-gap: 40px;
+	}
+	.card-conts .left{
+		width: 100%;
+	}
+}
+
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+	position: relative;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.chose{
+	background-color: #3eb100;
+	color: white;
+	width: fit-content;
+	display: flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 15px;
+}

@@ -1,0 +1,133 @@
+.headerlogo img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.blue-bar {
+    height: 40px;
+    width: 100%;
+    background-color: #13A4C7;
+}
+
+.header {
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    box-shadow: 0px 1px 6.9px #70898F;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background-color: #fff;
+}
+
+.h-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.nav-links {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+    left: 15%;
+}
+
+.nav-links .enter>a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 59.75px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links>a:hover {
+    color: #017693;
+}
+
+.line {
+    width: 1px;
+    height: 20px;
+    background-color: #70898F;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #CCD3CA;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    /* left: 10%; */
+    /* line-height: 50px; */
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #13A4C7;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-mobile {
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn {
+    text-decoration: none;
+    color: #FFF;
+    background: #13A4C7;
+    width: 135px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 33.5px; */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #017693;
+}
+
+.down-btn {
+    display: none;
+}

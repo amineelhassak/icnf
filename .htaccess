@@ -1,0 +1,17 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+# Redirect /admin to /admin.php
+RewriteRule ^admin$ admin.php [NC,L]
+
+# Redirect /login to /login.php
+RewriteRule ^login$ login.php [NC,L]
+
+# Redirect /checkout to /checkout.php
+RewriteRule ^checkout$ checkout.php [NC,L]
+
+# Redirect /success to /success.php
+RewriteRule ^success$ success.php [NC,L]
+
+# Redirect /error to /error.php
+RewriteRule ^error$ error.php [NC,L]

@@ -1,0 +1,101 @@
+.body{
+    background-color: #FAFAFA;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+.btnn{
+    border: none;
+    background-color:white;
+    font-weight:600;
+    font-size:14px;
+    color: #808191;
+}
+.orders{
+    margin-left: 80px;
+    color: #292929;
+}
+
+.title1{
+    font-weight: 700;
+    font-size: 16px;
+    color: #676767;
+}
+.div1{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: rgb(255, 255, 255);
+    min-width: 350px;
+}
+.div1 > div{
+    margin:20px;
+}
+
+.div2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 1000%;
+}
+
+#tr1 > th{
+    background-color: #F2F4FF;
+    font-size: 16px;
+    font-weight: 400;
+}
+#x{
+    border: 1px solid #FBFBFF;
+}
+.forme{
+    border:1px #F0F0F0;
+    row-gap: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    flex-direction: column;
+    background-color: white;
+    padding:10px 50px;
+    width: 90%;
+    margin: 0 auto;
+}
+.tr2 > td{
+    font-size: 14px;
+}
+
+.nav-u{
+    align-self: center;
+}
+td {
+    text-align: center;
+   vertical-align: middle;
+}
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 15px 30px 0px 0px;
+    color: #13A4C7;
+    text-align: center;
+}
+
+.logo>h1 {
+    font-family: 'ROBOTO' sans-serif;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 42.19px;
+}
+
+.logo>span {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18.75px;
+    letter-spacing: 0.2cap;
+    padding-left: 12px;
+}
