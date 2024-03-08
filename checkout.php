@@ -114,11 +114,11 @@ if (!isset($_POST["type"])) {
         <div class="modal-content">
             <span class="close">&times;</span>
             <div>
-                <form action="./scripts/add_order.php" method="post">
+                <form action="./scripts/add_order.php" enctype="multipart/form-data" method="post">
                     <h1>UPLOAD FILES</h1>
                     <div>
-                        <input type="text" required placeholder="Name">
-                        <input type="text" required placeholder="CIN">
+                        <input name="name" type="text" required placeholder="Name">
+                        <input name="cin" type="text" required placeholder="CIN">
                         <div>
                             <label for="choose-file" class="chose">Upload Signature</label>
                             <input name="signature" type="file" id="choose-file" accept=".pdf,doc,docx" style="display: none;" />

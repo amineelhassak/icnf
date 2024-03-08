@@ -1,52 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-.dashboard {
+.body{
+    background-color: #FAFAFA;
+    display: flex;
+    height: 100vh;
     width: 100%;
-    min-height: 100vh;
+}
+.btnn{
+    border: none;
+    background-color:white;
+    font-weight:600;
+    font-size:14px;
+    color: #808191;
+}
+.orders{
+    margin-left: 80px;
+    color: #292929;
+}
+
+.title1{
+    font-weight: 700;
+    font-size: 16px;
+    color: #676767;
+}
+.div1{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: rgb(255, 255, 255);
+    min-width: 350px;
+}
+.div1 > div{
+    margin:20px;
+}
+
+.div2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 1000%;
+}
+
+#tr1 > th{
+    background-color: #F2F4FF;
+    font-size: 16px;
+    font-weight: 400;
+}
+#x{
+    border: 1px solid #FBFBFF;
+}
+.forme{
+    border:1px #F0F0F0;
+    row-gap: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    flex-direction: column;
+    background-color: white;
+    padding:10px 50px;
+    width: 90%;
+    margin: 0 auto;
+} 
+.tr2 > td{
+    font-size: 14px;
+}
+
+.nav-u{
+    align-self: center;
+}
+td {
+    text-align: center;
+   vertical-align: middle;
+}
+
+
+.logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 80px;
-    position: relative;
+    flex-direction: row;
+    margin-top: 15px 30px 0px 0px;
+    color: #13A4C7;
+    text-align: center;
 }
-.left {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    max-width: 300px ;
-    width: 20%;
-    background: #4095f7;
-    height: 80vh;
-    max-height: 900px;
-    border-radius: 20px;
-    padding: 40px;
-}
-.logout-btn{
-    width: 110px;
-    height: 40px;
-    border-radius: 20px;
-    background-color: rgb(255, 30, 30);
-    border: none;
-    cursor: pointer;
-    color: wheat;
-}
-.title{
-    font-weight: bold;
-    color: rgb(14, 14, 14);
 
-
+.logo>h1 {
+    font-family: 'ROBOTO' sans-serif;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 42.19px;
 }
-.right {
-    width: 70%;
+
+.logo>span {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18.75px;
+    letter-spacing: 0.2cap;
+    padding-left: 12px;
 }
