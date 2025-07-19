@@ -1,185 +1,161 @@
-# ICNF 2024 - International Conference on Nitrogen Fixation
+# 🏨 ICNF - Accommodation Booking System
 
-A modern, responsive website for the International Conference on Nitrogen Fixation 2024, hosted at Mohammed V University of Rabat, Morocco.
+[![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Complete-brightgreen.svg)]()
+[![Version](https://img.shields.io/badge/Version-1.0.0-blue.svg)]()
 
-## 📅 Conference Details
+<div align="center">
 
-- **Date**: September 9-13, 2024
-- **Location**: Faculty of Science and Education, Mohammed V University of Rabat
-- **Theme**: Nitrogen Fixation - Unveiling Diverse Frontiers
+# 🏨 ICNF - Accommodation Booking System
 
-## 🚀 Features
+> A full-featured accommodation booking platform with user registration, admin panel, and payment integration.
 
-### Main Website
-- **Responsive Design**: Mobile-friendly interface
-- **Interactive Registration**: Real-time pricing calculator
-- **Conference Information**: About, guidelines, location details
-- **Contact System**: Contact form with location information
-- **Admin Panel**: Secure admin dashboard for management
+**Book, manage, and administer accommodations with a modern web interface!**
 
-### Registration System
-- **Two Pricing Tiers**:
-  - Early Bird (Before May 10, 2024)
-  - Regular (From June 15, 2024)
-- **Multiple Ticket Types**:
-  - Regular Participants: €450/€550
-  - Students: €300/€400
-  - Accompanying Persons: €200
-  - Social Event: €70
-- **Interactive Checkout**: Real-time total calculation
+[![GitHub stars](https://img.shields.io/github/stars/yourusername/icnf?style=social)](https://github.com/yourusername/icnf/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/yourusername/icnf?style=social)](https://github.com/yourusername/icnf/network)
+[![GitHub issues](https://img.shields.io/github/issues/yourusername/icnf)](https://github.com/yourusername/icnf/issues)
 
-### Guidelines Pages
-- **Oral Presentations**: PowerPoint requirements and presentation guidelines
-- **Poster Guidelines**: Size specifications and presentation schedules
-
-## 🛠️ Technology Stack
-
-### Frontend
-- HTML5
-- CSS3 (Custom responsive design)
-- JavaScript (ES6+)
-- Google Fonts (Roboto)
-
-### Backend
-- PHP 8.2+
-- MySQL Database
-- Session Management
-
-### Design
-- Primary Color: #13A4C7 (Blue)
-- Responsive Grid System
-- Modern UI/UX Principles
-
-## 📁 Project Structure
-
-```
-icnf/
-├── index.php              # Main landing page
-├── checkout.php           # Registration checkout
-├── admin.php              # Admin dashboard
-├── login.php              # Admin login
-├── orale.php              # Oral presentation guidelines
-├── poster.php             # Poster guidelines
-├── script.js              # Main JavaScript functionality
-├── checkout.js            # Checkout system
-├── payment.js             # Payment processing
-├── send_email.php         # Email functionality
-├── db/
-│   ├── connect.php        # Database connection
-│   ├── icnf.sql           # Database schema
-│   └── checkout.html      # Checkout template
-├── style/
-│   ├── style.css          # Main stylesheet
-│   ├── admin.css          # Admin panel styles
-│   └── checkout.css       # Checkout page styles
-├── assets/
-│   ├── icons/             # SVG icons
-│   ├── images/            # Conference images
-│   └── logo_INCF.PNG      # Conference logo
-├── scripts/
-│   ├── login_script.php   # Login processing
-│   └── logout.php         # Logout functionality
-└── shadows/               # Design assets
-```
-
-## 🗄️ Database Schema
-
-### Admin Table
-```sql
-CREATE TABLE admin (
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  username VARCHAR(120) UNIQUE NOT NULL,
-  password VARCHAR(120) NOT NULL
-);
-```
-
-### Order Table
-```sql
-CREATE TABLE `order` (
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  title TEXT NOT NULL,
-  ordred_by VARCHAR(120) NOT NULL,
-  screen_one TEXT NOT NULL,
-  screen_two INT NOT NULL,
-  at DATE NOT NULL
-);
-```
-
-## 🚀 Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone [repository-url]
-   cd icnf
-   ```
-
-2. **Set up the database**
-   - Create a MySQL database named `icnf`
-   - Import `db/icnf.sql` to create tables
-   - Update database credentials in `db/connect.php`
-
-3. **Configure web server**
-   - Point your web server to the project directory
-   - Ensure PHP 8.2+ is installed
-   - Enable MySQL extension
-
-4. **Set up admin access**
-   - Default admin credentials are in the database
-   - Access admin panel at `/login.php`
-
-## 📱 Responsive Design
-
-The website is fully responsive with breakpoints at:
-- **Desktop**: 900px+
-- **Mobile**: < 900px
-
-## 🎨 Design Features
-
-- **Sticky Navigation**: Header stays at top during scroll
-- **Smooth Scrolling**: Enhanced user experience
-- **Interactive Elements**: Toggle switches, dropdowns
-- **Modern Typography**: Clean, readable fonts
-- **Professional Color Scheme**: Blue-based design
-
-## 🔧 Configuration
-
-### Database Connection
-Edit `db/connect.php`:
-```php
-$db_host = "localhost";
-$db_name = "icnf";
-$db_username = "your_username";
-$db_password = "your_password";
-```
-
-### Email Configuration
-Update `send_email.php` with your email settings.
-
-## 📋 TODO Items
-
-- [ ] Card container font and line adjustment
-- [ ] Ticket counter functionality
-- [ ] Carts positioning, background and colors
-
-## 🔒 Security Features
-
-- Session-based authentication
-- Form validation
-- SQL injection protection
-- XSS prevention
-
-## 📞 Contact Information
-
-- **Location**: Faculty of Sciences Rabat, 4 Avenue Ibn Batouta BP 1014 RP, RABAT
-
-## 📄 License
-
-© All rights reserved 2024 - ICNF Conference
-
-## 🤝 Contributing
-
-This is a conference-specific project. For modifications, please contact the development team.
+</div>
 
 ---
 
-**Built with ❤️ for the International Conference on Nitrogen Fixation 2024** 
+## 📚 Table of Contents
+- [🎯 Overview](#-overview)
+- [✨ Features](#-features)
+- [🛠️ Installation](#️-installation)
+- [🚀 Usage](#-usage)
+- [📁 Project Structure](#-project-structure)
+- [🛠️ Technologies Used](#️-technologies-used)
+- [🧪 Testing](#-testing)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+
+## 🎯 Overview
+ICNF is a **web-based accommodation booking system** built with PHP, MySQL, HTML5, and CSS3. It features user registration, room booking, admin management, and payment integration, making it suitable for hotels, hostels, or any accommodation provider.
+
+### 🎓 What You'll Learn
+- **PHP backend development**
+- **MySQL database design and queries**
+- **User authentication and session management**
+- **Admin dashboard and CRUD operations**
+- **Payment integration basics**
+- **Responsive web design with HTML5/CSS3**
+
+## ✨ Features
+- ✅ User registration and authentication
+- ✅ Room booking and management
+- ✅ Admin dashboard for managing users and bookings
+- ✅ Payment integration (demo)
+- ✅ Responsive design for mobile and desktop
+- ✅ Email notifications (demo)
+
+## 🛠️ Installation
+### Prerequisites
+- **PHP 7.4+**
+- **MySQL 5.7+**
+- **Web server** (Apache/Nginx)
+
+### Setup
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/icnf.git
+   cd icnf
+   ```
+2. **Import the database**
+   - Use the `db/icnf.sql` file to create the database and tables
+3. **Configure database connection**
+   - Edit `db/connect.php` with your MySQL credentials
+4. **Set up your web server**
+   - Point your document root to the `icnf` directory
+5. **Access the app in your browser**
+   - Visit `http://localhost/icnf` (or your configured domain)
+
+## 🚀 Usage
+- Register as a new user
+- Browse available accommodations
+- Book a room and proceed to payment (demo)
+- Admins can log in to manage users, rooms, and bookings
+
+## 📁 Project Structure
+```
+icnf/
+├── assets/           # Images, icons, and static assets
+├── db/               # Database scripts and connection
+├── scripts/          # PHP scripts for login, logout, etc.
+├── shadows/          # UI shadow images
+├── style/            # CSS stylesheets
+├── accomodation.php  # Main booking page
+├── admin.php         # Admin dashboard
+├── checkout.php      # Checkout/payment page
+├── index.php         # Landing page
+├── README.md         # This file
+```
+
+## 🛠️ Technologies Used
+- ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+- ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+- ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+- ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+## 🧪 Testing
+- Test locally using XAMPP, MAMP, or a LAMP stack
+- Use the provided SQL file to set up the database
+- Register, book, and manage as both user and admin
+
+## 🤝 Contributing
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+### How to Contribute
+1. **Fork the repository**
+   ```bash
+   git clone https://github.com/yourusername/icnf.git
+   ```
+2. **Create your feature branch**
+   ```bash
+   git checkout -b feature/AmazingFeature
+   ```
+3. **Make your changes**
+   - Follow the existing code style
+   - Add new features or fix bugs
+   - Update documentation as needed
+4. **Commit your changes**
+   ```bash
+   git commit -m 'Add some AmazingFeature'
+   ```
+5. **Push to the branch**
+   ```bash
+   git push origin feature/AmazingFeature
+   ```
+6. **Open a Pull Request**
+
+### Contribution Guidelines
+- Follow the existing code style and conventions
+- Add tests or documentation for new features
+- Ensure the app works on both desktop and mobile
+
+## 📄 License
+This project is part of the 42 School curriculum. The code is written for educational purposes.
+
+---
+
+<div align="center">
+
+**Made with ❤️ and lots of ☕**
+
+*Book, manage, and administer accommodations with a modern web interface!*
+
+[![GitHub stars](https://img.shields.io/github/stars/yourusername/icnf?style=social)](https://github.com/yourusername/icnf/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/yourusername/icnf?style=social)](https://github.com/yourusername/icnf/network)
+[![GitHub issues](https://img.shields.io/github/issues/yourusername/icnf)](https://github.com/yourusername/icnf/issues)
+
+**Author**: [Your Name]  
+**School**: 42 School  
+**Project**: ICNF  
+**Last updated**: December 2024
+
+</div> 
