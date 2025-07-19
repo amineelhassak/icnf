@@ -171,7 +171,6 @@ Update `send_email.php` with your email settings.
 ## 📞 Contact Information
 
 - **Location**: Faculty of Sciences Rabat, 4 Avenue Ibn Batouta BP 1014 RP, RABAT
-- **Email**: exemple@gmail.com
 
 ## 📄 License
 
